@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Royal Rasoi – Authentic Kerala Restaurant | Kharghar, Navi Mumbai</title>
-  <meta name="description"
-    content="Royal Rasoi – Taste the authentic flavours of Kerala in Kharghar, Navi Mumbai. Daily Sadhya on banana leaf, Karimeen Pollichathu, Appam & more. Order on Swiggy or Zomato." />
+  <meta name="description" content="Royal Rasoi – Taste the authentic flavours of Kerala in Kharghar, Navi Mumbai. Daily Sadhya on banana leaf, Karimeen Pollichathu, Appam & more. Order on Swiggy or Zomato." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     /* ===== RESET & BASE ===== */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --gold: #C9933A;
+      --gold:    #C9933A;
       --gold-light: #E5B660;
-      --green: #1A4731;
+      --green:   #1A4731;
       --green-mid: #2C6E49;
-      --cream: #FDF6EC;
-      --dark: #111810;
-      --text: #2d2d2d;
-      --muted: #6b6b6b;
-      --radius: 16px;
+      --cream:   #FDF6EC;
+      --dark:    #111810;
+      --text:    #2d2d2d;
+      --muted:   #6b6b6b;
+      --radius:  16px;
     }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--cream);
@@ -47,40 +32,24 @@
 
     /* ===== NAV ===== */
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
       padding: 16px 48px;
       background: rgba(10, 28, 15, 0.85);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(201, 147, 58, 0.25);
+      border-bottom: 1px solid rgba(201,147,58,0.25);
       transition: padding 0.3s;
     }
-
     .nav-logo {
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       color: var(--gold-light);
       letter-spacing: 0.03em;
     }
-
-    .nav-logo span {
-      color: #fff;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
+    .nav-logo span { color: #fff; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255,255,255,0.8);
       text-decoration: none;
       font-size: 0.875rem;
       font-weight: 500;
@@ -88,11 +57,7 @@
       text-transform: uppercase;
       transition: color 0.2s;
     }
-
-    .nav-links a:hover {
-      color: var(--gold-light);
-    }
-
+    .nav-links a:hover { color: var(--gold-light); }
     .nav-order {
       background: var(--gold);
       color: #fff;
@@ -104,54 +69,37 @@
       letter-spacing: 0.03em;
       transition: background 0.2s, transform 0.2s;
     }
-
-    .nav-order:hover {
-      background: var(--gold-light);
-      transform: translateY(-1px);
-    }
+    .nav-order:hover { background: var(--gold-light); transform: translateY(-1px); }
 
     /* ===== HERO ===== */
     .hero {
       position: relative;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       overflow: hidden;
     }
-
     .hero-bg {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background-image: url('assets/hero.jpg');
-      background-size: cover;
-      background-position: center;
+      background-size: cover; background-position: center;
       filter: brightness(0.45);
       transform: scale(1.05);
       transition: transform 8s ease;
     }
-
-    .hero:hover .hero-bg {
-      transform: scale(1.0);
-    }
-
+    .hero:hover .hero-bg { transform: scale(1.0); }
     .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(10, 28, 15, 0.3) 0%, rgba(10, 28, 15, 0.75) 100%);
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,28,15,0.3) 0%, rgba(10,28,15,0.75) 100%);
     }
-
     .hero-content {
-      position: relative;
-      z-index: 2;
+      position: relative; z-index: 2;
       text-align: center;
       padding: 0 24px;
       animation: fadeUp 1s ease both;
     }
-
     .hero-badge {
       display: inline-block;
-      background: rgba(201, 147, 58, 0.2);
+      background: rgba(201,147,58,0.2);
       border: 1px solid var(--gold);
       color: var(--gold-light);
       padding: 6px 18px;
@@ -162,7 +110,6 @@
       text-transform: uppercase;
       margin-bottom: 24px;
     }
-
     .hero-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(3rem, 7vw, 6rem);
@@ -170,28 +117,18 @@
       line-height: 1.1;
       margin-bottom: 12px;
     }
-
-    .hero-title em {
-      color: var(--gold-light);
-      font-style: italic;
-    }
-
+    .hero-title em { color: var(--gold-light); font-style: italic; }
     .hero-sub {
       font-size: clamp(1rem, 2vw, 1.25rem);
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(255,255,255,0.75);
       max-width: 520px;
       margin: 0 auto 40px;
       font-weight: 300;
       line-height: 1.6;
     }
-
     .hero-cta {
-      display: inline-flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;
     }
-
     .btn {
       padding: 14px 32px;
       border-radius: 50px;
@@ -200,106 +137,47 @@
       text-decoration: none;
       letter-spacing: 0.03em;
       transition: all 0.25s;
-      cursor: pointer;
-      border: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      cursor: pointer; border: none;
+      display: inline-flex; align-items: center; gap: 8px;
     }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(201, 147, 58, 0.4);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid rgba(255, 255, 255, 0.6);
-      color: #fff;
-    }
-
-    .btn-outline:hover {
-      border-color: #fff;
-      background: rgba(255, 255, 255, 0.1);
-      transform: translateY(-2px);
-    }
-
+    .btn-primary { background: var(--gold); color: #fff; }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,147,58,0.4); }
+    .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.6); color: #fff; }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); transform: translateY(-2px); }
     .hero-scroll {
-      position: absolute;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.5); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
       animation: bounce 2s infinite;
     }
-
-    .hero-scroll svg {
-      width: 20px;
-      height: 20px;
-    }
+    .hero-scroll svg { width: 20px; height: 20px; }
 
     /* ===== STATS STRIP ===== */
     .stats-strip {
       background: var(--green);
       padding: 28px 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
+      display: flex; align-items: center; justify-content: center; gap: 0;
       flex-wrap: wrap;
     }
-
     .stat-item {
-      flex: 1;
-      min-width: 160px;
-      max-width: 240px;
-      text-align: center;
-      padding: 16px 24px;
-      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      flex: 1; min-width: 160px; max-width: 240px;
+      text-align: center; padding: 16px 24px;
+      border-right: 1px solid rgba(255,255,255,0.15);
     }
-
-    .stat-item:last-child {
-      border-right: none;
-    }
-
+    .stat-item:last-child { border-right: none; }
     .stat-num {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 2rem; font-weight: 700;
       color: var(--gold-light);
     }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: rgba(255, 255, 255, 0.65);
-      margin-top: 4px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.65); margin-top: 4px; letter-spacing: 0.05em; text-transform: uppercase; }
 
     /* ===== SECTIONS ===== */
-    section {
-      padding: 96px 48px;
-    }
-
+    section { padding: 96px 48px; }
     .section-label {
       display: inline-block;
-      background: rgba(201, 147, 58, 0.12);
-      border: 1px solid rgba(201, 147, 58, 0.4);
+      background: rgba(201,147,58,0.12);
+      border: 1px solid rgba(201,147,58,0.4);
       color: var(--gold);
       padding: 4px 14px;
       border-radius: 50px;
@@ -309,7 +187,6 @@
       text-transform: uppercase;
       margin-bottom: 16px;
     }
-
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -317,7 +194,6 @@
       line-height: 1.2;
       margin-bottom: 16px;
     }
-
     .section-desc {
       font-size: 1rem;
       color: var(--muted);
@@ -326,1264 +202,692 @@
     }
 
     /* ===== ABOUT ===== */
-    .about {
-      background: var(--cream);
-    }
-
+    .about { background: var(--cream); }
     .about-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
     }
-
     .about-image-wrap {
-      position: relative;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+      position: relative; border-radius: 24px; overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.18);
     }
-
     .about-image-wrap img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
+      width: 100%; height: 500px; object-fit: cover;
       display: block;
       transition: transform 0.6s ease;
     }
-
-    .about-image-wrap:hover img {
-      transform: scale(1.04);
-    }
-
+    .about-image-wrap:hover img { transform: scale(1.04); }
     .about-badge {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
-      background: rgba(10, 28, 15, 0.85);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(201, 147, 58, 0.4);
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 14px;
+      position: absolute; bottom: 24px; left: 24px;
+      background: rgba(10,28,15,0.85); backdrop-filter: blur(8px);
+      border: 1px solid rgba(201,147,58,0.4);
+      color: #fff; padding: 12px 20px; border-radius: 14px;
     }
-
-    .about-badge-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--gold-light);
-    }
-
-    .about-badge-text {
-      font-size: 0.72rem;
-      color: rgba(255, 255, 255, 0.7);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .about-highlights {
-      display: flex;
-      gap: 16px;
-      margin-top: 32px;
-      flex-wrap: wrap;
-    }
-
+    .about-badge-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold-light); }
+    .about-badge-text { font-size: 0.72rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.08em; }
+    .about-highlights { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
     .highlight-pill {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(26, 71, 49, 0.08);
-      border: 1px solid rgba(26, 71, 49, 0.15);
-      padding: 8px 16px;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      color: var(--green-mid);
-      font-weight: 500;
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(26,71,49,0.08);
+      border: 1px solid rgba(26,71,49,0.15);
+      padding: 8px 16px; border-radius: 50px;
+      font-size: 0.85rem; color: var(--green-mid); font-weight: 500;
     }
-
-    .highlight-pill svg {
-      width: 16px;
-      height: 16px;
-      flex-shrink: 0;
-    }
+    .highlight-pill svg { width: 16px; height: 16px; flex-shrink: 0; }
 
     /* ===== MENU ===== */
-    .menu-section {
-      background: #fff;
-    }
-
-    .menu-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .menu-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    .menu-header .section-desc {
-      margin: 0 auto;
-    }
-
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 28px;
-    }
-
+    .menu-section { background: #fff; }
+    .menu-inner { max-width: 1200px; margin: 0 auto; }
+    .menu-header { text-align: center; margin-bottom: 56px; }
+    .menu-header .section-desc { margin: 0 auto; }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px; }
     .menu-card {
       background: var(--cream);
-      border: 1px solid rgba(0, 0, 0, 0.07);
+      border: 1px solid rgba(0,0,0,0.07);
       border-radius: 20px;
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-
-    .menu-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
-    }
-
+    .menu-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.12); }
     .menu-card-img {
-      height: 200px;
-      width: 100%;
-      object-fit: cover;
+      height: 200px; width: 100%; object-fit: cover;
       background: linear-gradient(135deg, #2C6E49 0%, #1A4731 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       font-size: 3.5rem;
     }
-
-    .menu-card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .menu-card-body {
-      padding: 20px 24px;
-    }
-
+    .menu-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .menu-card-body { padding: 20px 24px; }
     .menu-card-cat {
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 6px;
+      font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 6px;
     }
-
     .menu-card-name {
       font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      color: var(--dark);
-      margin-bottom: 8px;
+      font-size: 1.2rem; color: var(--dark); margin-bottom: 8px;
     }
-
-    .menu-card-desc {
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
+    .menu-card-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
     .menu-card-price {
       margin-top: 14px;
-      font-weight: 600;
-      color: var(--green-mid);
-      font-size: 1rem;
+      font-weight: 600; color: var(--green-mid); font-size: 1rem;
     }
 
     /* ===== ORDER SECTION ===== */
-    .order-section {
-      background: var(--green);
-    }
-
-    .order-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .order-inner .section-title {
-      color: #fff;
-    }
-
-    .order-inner .section-desc {
-      color: rgba(255, 255, 255, 0.65);
-      margin: 0 auto 56px;
-    }
-
-    .order-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
+    .order-section { background: var(--green); }
+    .order-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .order-inner .section-title { color: #fff; }
+    .order-inner .section-desc { color: rgba(255,255,255,0.65); margin: 0 auto 56px; }
+    .order-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .order-card {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 20px;
       padding: 36px 28px;
       transition: background 0.3s, transform 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
     }
-
-    .order-card:hover {
-      background: rgba(255, 255, 255, 0.13);
-      transform: translateY(-4px);
-    }
-
+    .order-card:hover { background: rgba(255,255,255,0.13); transform: translateY(-4px); }
     .order-card-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 64px; height: 64px; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
       font-size: 1.8rem;
     }
-
     .order-card-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      color: #fff;
+      font-size: 1.3rem; color: #fff;
     }
-
-    .order-card-desc {
-      font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.6);
-      line-height: 1.6;
-    }
-
+    .order-card-desc { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
     /* QR placeholder */
     .qr-placeholder {
-      width: 140px;
-      height: 140px;
-      background: rgba(255, 255, 255, 0.9);
+      width: 140px; height: 140px;
+      background: rgba(255,255,255,0.9);
       border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
       gap: 6px;
-      color: var(--green);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border: 2px dashed rgba(26, 71, 49, 0.4);
+      color: var(--green); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 2px dashed rgba(26,71,49,0.4);
     }
-
-    .qr-placeholder svg {
-      width: 48px;
-      height: 48px;
-      opacity: 0.35;
-    }
-
+    .qr-placeholder svg { width: 48px; height: 48px; opacity: 0.35; }
     .order-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.25s;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 600;
+      text-decoration: none; transition: all 0.25s;
       margin-top: 4px;
     }
-
-    .order-link-wa {
-      background: #25D366;
-      color: #fff;
-    }
-
-    .order-link-wa:hover {
-      background: #1ebe59;
-      transform: scale(1.04);
-    }
-
-    .order-link-sw {
-      background: #FC8019;
-      color: #fff;
-    }
-
-    .order-link-sw:hover {
-      background: #e5711a;
-      transform: scale(1.04);
-    }
-
-    .order-link-zo {
-      background: #E23744;
-      color: #fff;
-    }
-
-    .order-link-zo:hover {
-      background: #c73040;
-      transform: scale(1.04);
-    }
+    .order-link-wa { background: #25D366; color: #fff; }
+    .order-link-wa:hover { background: #1ebe59; transform: scale(1.04); }
+    .order-link-sw { background: #FC8019; color: #fff; }
+    .order-link-sw:hover { background: #e5711a; transform: scale(1.04); }
+    .order-link-zo { background: #E23744; color: #fff; }
+    .order-link-zo:hover { background: #c73040; transform: scale(1.04); }
 
     /* ===== HOURS ===== */
-    .hours-section {
-      background: var(--cream);
-    }
-
+    .hours-section { background: var(--cream); }
     .hours-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
     }
-
-    .hours-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 28px;
-    }
-
-    .hours-table tr {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    }
-
-    .hours-table tr:last-child {
-      border-bottom: none;
-    }
-
-    .hours-table td {
-      padding: 14px 0;
-      font-size: 0.95rem;
-    }
-
-    .hours-table td:first-child {
-      color: var(--muted);
-    }
-
-    .hours-table td:last-child {
-      font-weight: 600;
-      color: var(--green-mid);
-      text-align: right;
-    }
-
+    .hours-table { width: 100%; border-collapse: collapse; margin-top: 28px; }
+    .hours-table tr { border-bottom: 1px solid rgba(0,0,0,0.07); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td { padding: 14px 0; font-size: 0.95rem; }
+    .hours-table td:first-child { color: var(--muted); }
+    .hours-table td:last-child { font-weight: 600; color: var(--green-mid); text-align: right; }
     .hours-note {
       margin-top: 20px;
-      background: rgba(201, 147, 58, 0.1);
+      background: rgba(201,147,58,0.1);
       border-left: 3px solid var(--gold);
-      padding: 12px 16px;
-      border-radius: 0 8px 8px 0;
-      font-size: 0.85rem;
-      color: var(--text);
-      line-height: 1.6;
+      padding: 12px 16px; border-radius: 0 8px 8px 0;
+      font-size: 0.85rem; color: var(--text); line-height: 1.6;
     }
-
     .map-embed {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+      border-radius: 24px; overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
       height: 400px;
     }
-
-    .map-embed iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .contact-block {
-      margin-top: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
+    .map-embed iframe { width: 100%; height: 100%; border: none; }
+    .contact-block { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
     .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+      display: flex; align-items: center; gap: 14px;
       padding: 14px 20px;
-      background: #fff;
-      border-radius: 14px;
-      border: 1px solid rgba(0, 0, 0, 0.07);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      text-decoration: none;
-      color: var(--text);
+      background: #fff; border-radius: 14px;
+      border: 1px solid rgba(0,0,0,0.07);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      text-decoration: none; color: var(--text);
       transition: box-shadow 0.2s, transform 0.2s;
     }
-
-    .contact-item:hover {
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      transform: translateY(-2px);
-    }
-
+    .contact-item:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); transform: translateY(-2px); }
     .contact-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 40px; height: 40px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
-
-    .contact-icon svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .contact-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-    }
-
-    .contact-value {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--dark);
-    }
+    .contact-icon svg { width: 20px; height: 20px; }
+    .contact-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .contact-value { font-size: 0.95rem; font-weight: 600; color: var(--dark); }
 
     /* ===== TESTIMONIALS ===== */
-    .reviews-section {
-      background: #fff;
-    }
-
-    .reviews-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .reviews-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 24px;
-    }
-
+    .reviews-section { background: #fff; }
+    .reviews-inner { max-width: 1100px; margin: 0 auto; }
+    .reviews-header { text-align: center; margin-bottom: 48px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
     .review-card {
       background: var(--cream);
-      border: 1px solid rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0,0,0,0.06);
       border-radius: 20px;
       padding: 28px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-
-    .review-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-    }
-
-    .review-stars {
-      color: #F4A61D;
-      font-size: 1rem;
-      margin-bottom: 14px;
-      letter-spacing: 2px;
-    }
-
-    .review-text {
-      font-size: 0.92rem;
-      line-height: 1.7;
-      color: var(--text);
-      font-style: italic;
-      margin-bottom: 18px;
-    }
-
-    .review-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
+    .review-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+    .review-stars { color: #F4A61D; font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
+    .review-text { font-size: 0.92rem; line-height: 1.7; color: var(--text); font-style: italic; margin-bottom: 18px; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
     .review-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+      width: 40px; height: 40px; border-radius: 50%;
       background: var(--green-mid);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #fff;
-      font-size: 0.9rem;
-      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #fff; font-size: 0.9rem; flex-shrink: 0;
     }
-
-    .review-name {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .review-date {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
+    .review-name { font-weight: 600; font-size: 0.9rem; }
+    .review-date { font-size: 0.78rem; color: var(--muted); }
 
     /* ===== FOOTER ===== */
     footer {
       background: var(--dark);
       padding: 56px 48px 32px;
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255,255,255,0.6);
     }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .footer-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
-      margin-bottom: 48px;
-    }
-
-    .footer-brand .nav-logo {
-      font-size: 1.8rem;
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .footer-brand p {
-      font-size: 0.88rem;
-      line-height: 1.7;
-      max-width: 280px;
-    }
-
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 48px; }
+    .footer-brand .nav-logo { font-size: 1.8rem; display: block; margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 280px; }
     .footer-links h4 {
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.35);
-      margin-bottom: 16px;
+      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35); margin-bottom: 16px;
     }
-
-    .footer-links ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.6);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: var(--gold-light);
-    }
-
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold-light); }
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255,255,255,0.08);
       padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
       font-size: 0.8rem;
     }
-
-    .footer-bottom a {
-      color: var(--gold);
-      text-decoration: none;
-    }
+    .footer-bottom a { color: var(--gold); text-decoration: none; }
 
     /* ===== ANIMATIONS ===== */
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes bounce {
-
-      0%,
-      100% {
-        transform: translateX(-50%) translateY(0);
-      }
-
-      50% {
-        transform: translateX(-50%) translateY(8px);
-      }
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(8px); }
     }
 
     /* ===== RESPONSIVE ===== */
     /* Hamburger menu button */
     .nav-hamburger {
       display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
-      padding: 4px;
+      background: none; border: none; cursor: pointer;
+      flex-direction: column; gap: 5px; padding: 4px;
     }
-
     .nav-hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
+      display: block; width: 24px; height: 2px;
+      background: #fff; border-radius: 2px;
       transition: transform 0.3s, opacity 0.3s;
     }
 
     @media (max-width: 768px) {
-
       /* Nav */
-      nav {
-        padding: 14px 20px;
-      }
-
+      nav { padding: 14px 20px; }
       .nav-links {
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        gap: 0;
-        background: rgba(10, 28, 15, 0.95);
-        backdrop-filter: blur(14px);
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; gap: 0;
+        background: rgba(10,28,15,0.95); backdrop-filter: blur(14px);
         padding: 8px 0;
-        border-bottom: 1px solid rgba(201, 147, 58, 0.25);
+        border-bottom: 1px solid rgba(201,147,58,0.25);
       }
-
-      .nav-links.open {
-        display: flex;
-      }
-
+      .nav-links.open { display: flex; }
       .nav-links a {
-        display: block;
-        padding: 14px 24px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        display: block; padding: 14px 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
       }
-
-      .nav-hamburger {
-        display: flex;
-      }
-
-      .nav-order {
-        padding: 8px 16px;
-        font-size: 0.8rem;
-      }
+      .nav-hamburger { display: flex; }
+      .nav-order { padding: 8px 16px; font-size: 0.8rem; }
 
       /* Hero */
-      .hero {
-        min-height: 85vh;
-      }
-
-      .hero-title {
-        font-size: clamp(2rem, 8vw, 3.2rem);
-      }
-
-      .hero-sub {
-        font-size: 0.95rem;
-        margin-bottom: 28px;
-      }
-
-      .hero-badge {
-        font-size: 0.68rem;
-        padding: 5px 14px;
-      }
-
-      .btn {
-        padding: 12px 24px;
-        font-size: 0.88rem;
-      }
+      .hero { min-height: 85vh; }
+      .hero-title { font-size: clamp(2rem, 8vw, 3.2rem); }
+      .hero-sub { font-size: 0.95rem; margin-bottom: 28px; }
+      .hero-badge { font-size: 0.68rem; padding: 5px 14px; }
+      .btn { padding: 12px 24px; font-size: 0.88rem; }
 
       /* Sections */
-      section {
-        padding: 56px 20px;
-      }
-
-      .section-title {
-        font-size: clamp(1.6rem, 5vw, 2.2rem);
-      }
-
-      .section-desc {
-        font-size: 0.92rem;
-      }
+      section { padding: 56px 20px; }
+      .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+      .section-desc { font-size: 0.92rem; }
 
       /* Stats */
-      .stats-strip {
-        padding: 16px 12px;
-        flex-wrap: wrap;
-      }
-
-      .stat-item {
-        min-width: 45%;
-        flex: 0 0 45%;
-        padding: 12px 8px;
-        border-right: none;
-      }
-
-      .stat-item:nth-child(odd) {
-        border-right: 1px solid rgba(255, 255, 255, 0.15);
-      }
-
-      .stat-num {
-        font-size: 1.5rem;
-      }
-
-      .stat-label {
-        font-size: 0.68rem;
-      }
+      .stats-strip { padding: 16px 12px; flex-wrap: wrap; }
+      .stat-item { min-width: 45%; flex: 0 0 45%; padding: 12px 8px; border-right: none; }
+      .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.15); }
+      .stat-num { font-size: 1.5rem; }
+      .stat-label { font-size: 0.68rem; }
 
       /* About */
-      .about-inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .about-image-wrap img {
-        height: 280px;
-      }
-
-      .about-highlights {
-        gap: 10px;
-      }
-
-      .highlight-pill {
-        font-size: 0.78rem;
-        padding: 6px 12px;
-      }
+      .about-inner { grid-template-columns: 1fr; gap: 32px; }
+      .about-image-wrap img { height: 280px; }
+      .about-highlights { gap: 10px; }
+      .highlight-pill { font-size: 0.78rem; padding: 6px 12px; }
 
       /* Menu */
-      .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .menu-card-img {
-        height: 180px;
-      }
+      .menu-grid { grid-template-columns: 1fr; gap: 20px; }
+      .menu-card-img { height: 180px; }
 
       /* Order */
-      .order-cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .order-card {
-        padding: 28px 20px;
-      }
-
-      .qr-placeholder {
-        width: 120px;
-        height: 120px;
-      }
+      .order-cards { grid-template-columns: 1fr; gap: 20px; }
+      .order-card { padding: 28px 20px; }
+      .qr-placeholder { width: 120px; height: 120px; }
 
       /* Hours */
-      .hours-inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .map-embed {
-        height: 280px;
-      }
-
-      .contact-item {
-        padding: 12px 16px;
-      }
-
-      .contact-value {
-        font-size: 0.85rem;
-      }
+      .hours-inner { grid-template-columns: 1fr; gap: 32px; }
+      .map-embed { height: 280px; }
+      .contact-item { padding: 12px 16px; }
+      .contact-value { font-size: 0.85rem; }
 
       /* Reviews */
-      .reviews-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .review-card {
-        padding: 22px;
-      }
+      .reviews-grid { grid-template-columns: 1fr; gap: 20px; }
+      .review-card { padding: 22px; }
 
       /* Footer */
-      footer {
-        padding: 36px 20px 24px;
-      }
-
-      .footer-top {
-        flex-direction: column;
-        gap: 28px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-      }
+      footer { padding: 36px 20px 24px; }
+      .footer-top { flex-direction: column; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
     }
 
     /* Small phones */
     @media (max-width: 400px) {
-      nav {
-        padding: 12px 16px;
-      }
-
-      .nav-logo {
-        font-size: 1.2rem;
-      }
-
-      section {
-        padding: 44px 16px;
-      }
-
-      .hero-title {
-        font-size: 2rem;
-      }
-
-      .hero-cta {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .btn {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .stat-item {
-        min-width: 100%;
-        flex: 0 0 100%;
-        border-right: none !important;
-      }
-
-      .about-image-wrap img {
-        height: 220px;
-      }
+      nav { padding: 12px 16px; }
+      .nav-logo { font-size: 1.2rem; }
+      section { padding: 44px 16px; }
+      .hero-title { font-size: 2rem; }
+      .hero-cta { flex-direction: column; align-items: center; }
+      .btn { width: 100%; justify-content: center; }
+      .stat-item { min-width: 100%; flex: 0 0 100%; border-right: none !important; }
+      .about-image-wrap img { height: 220px; }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav>
-    <div class="nav-logo"><span>Royal</span> Rasoi</div>
-    <button class="nav-hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#order">Order</a></li>
-      <li><a href="#visit">Visit Us</a></li>
-    </ul>
-    <a href="#order" class="nav-order">Order Now</a>
-  </nav>
+<!-- ===== NAVIGATION ===== -->
+<nav>
+  <div class="nav-logo"><span>Royal</span> Rasoi</div>
+  <button class="nav-hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#order">Order</a></li>
+    <li><a href="#visit">Visit Us</a></li>
+  </ul>
+  <a href="#order" class="nav-order">Order Now</a>
+</nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-badge">⭐ 4.0 · 2400+ Reviews · Kerala Cuisine</div>
-      <h1 class="hero-title">
-        The Taste of <em>Kerala</em><br />in Navi Mumbai
-      </h1>
-      <p class="hero-sub">
-        Daily Sadhya on banana leaf. Fresh Karimeen. Authentic Appam.
-        A little piece of God's Own Country — right here in Kharghar.
-      </p>
-      <div class="hero-cta">
-        <a href="#order" class="btn btn-primary">🍃 Order Online</a>
-        <a href="#menu" class="btn btn-outline">View Menu</a>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-      </svg>
-      Scroll
-    </div>
-  </section>
-
-  <!-- ===== STATS ===== -->
-  <div class="stats-strip">
-    <div class="stat-item">
-      <div class="stat-num">⭐ 4.0</div>
-      <div class="stat-label">Google Rating</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">2,400+</div>
-      <div class="stat-label">Happy Reviews</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">50+</div>
-      <div class="stat-label">Menu Items</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">Daily</div>
-      <div class="stat-label">Banana Leaf Sadhya</div>
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">⭐ 4.0 · 2400+ Reviews · Kerala Cuisine</div>
+    <h1 class="hero-title">
+      The Taste of <em>Kerala</em><br/>in Navi Mumbai
+    </h1>
+    <p class="hero-sub">
+      Daily Sadhya on banana leaf. Fresh Karimeen. Authentic Appam. 
+      A little piece of God's Own Country — right here in Kharghar.
+    </p>
+    <div class="hero-cta">
+      <a href="#order" class="btn btn-primary">🍃 Order Online</a>
+      <a href="#menu" class="btn btn-outline">View Menu</a>
     </div>
   </div>
+  <div class="hero-scroll">
+    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    Scroll
+  </div>
+</section>
 
-  <!-- ===== ABOUT ===== -->
-  <section class="about" id="about">
-    <div class="about-inner">
-      <div class="about-image-wrap">
-        <img src="assets/hero.jpg" alt="Kerala Sadhya on banana leaf at Royal Rasoi" />
+<!-- ===== STATS ===== -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <div class="stat-num">⭐ 4.0</div>
+    <div class="stat-label">Google Rating</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">2,400+</div>
+    <div class="stat-label">Happy Reviews</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">50+</div>
+    <div class="stat-label">Menu Items</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">Daily</div>
+    <div class="stat-label">Banana Leaf Sadhya</div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-image-wrap">
+      <img src="assets/hero.jpg" alt="Kerala Sadhya on banana leaf at Royal Rasoi" />
+    </div>
+    <div>
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">Bringing Kerala's<br/>Soul to Your Plate</h2>
+      <p class="section-desc">
+        At Royal Rasoi, we serve the rich culinary heritage of Kerala — from the iconic 
+        unlimited Sadhya on fresh banana leaves every afternoon, to crispy Karimeen Pollichathu 
+        and silky Appam with stew. Every dish is crafted with authentic recipes and traditional spices.
+      </p>
+      <div class="about-highlights">
+        <div class="highlight-pill">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Unlimited Sadhya
+        </div>
+        <div class="highlight-pill">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Banana Leaf Dining
+        </div>
+        <div class="highlight-pill">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Fresh Kerala Fish
+        </div>
+        <div class="highlight-pill">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          North & South Indian
+        </div>
       </div>
-      <div>
-        <div class="section-label">Our Story</div>
-        <h2 class="section-title">Bringing Kerala's<br />Soul to Your Plate</h2>
-        <p class="section-desc">
-          At Royal Rasoi, we serve the rich culinary heritage of Kerala — from the iconic
-          unlimited Sadhya on fresh banana leaves every afternoon, to crispy Karimeen Pollichathu
-          and silky Appam with stew. Every dish is crafted with authentic recipes and traditional spices.
-        </p>
-        <div class="about-highlights">
-          <div class="highlight-pill">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            Unlimited Sadhya
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU HIGHLIGHTS ===== -->
+<section class="menu-section" id="menu">
+  <div class="menu-inner">
+    <div class="menu-header">
+      <div class="section-label">Specialities</div>
+      <h2 class="section-title">What We're Famous For</h2>
+      <p class="section-desc">From the traditional feast to coastal delicacies — every meal is a journey to Kerala.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-card-img"><img src="assets/hero.jpg" alt="Kerala Sadhya" /></div>
+        <div class="menu-card-body">
+          <div class="menu-card-cat">Daily Lunch Special</div>
+          <div class="menu-card-name">Kerala Mini Sadhya</div>
+          <div class="menu-card-desc">Traditional feast served on fresh banana leaf — rice, sambar, avial, pachadi, papadam & more.</div>
+
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><img src="assets/dishes.jpg" alt="Kerala Dishes" /></div>
+        <div class="menu-card-body">
+          <div class="menu-card-cat">Coastal Delight</div>
+          <div class="menu-card-name">Karimeen Pollichathu</div>
+          <div class="menu-card-desc">Pearl spot fish marinated in spicy masala, wrapped in banana leaf and slow-cooked to perfection.</div>
+
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><img src="assets/appam-stew.png" alt="Appam with Stew" /></div>
+        <div class="menu-card-body">
+          <div class="menu-card-cat">Breakfast & Dinner</div>
+          <div class="menu-card-name">Appam with Stew</div>
+          <div class="menu-card-desc">Lacy fermented rice pancakes served with a creamy coconut milk vegetable or chicken stew.</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORDER SECTION ===== -->
+<section class="order-section" id="order">
+  <div class="order-inner">
+    <div class="section-label" style="background:rgba(201,147,58,0.2); color:var(--gold-light);">Order Now</div>
+    <h2 class="section-title">Get Royal Rasoi<br/>Delivered to You</h2>
+    <p class="section-desc">Order directly via WhatsApp or through your favourite food delivery app.</p>
+
+    <div class="order-cards">
+      <!-- WhatsApp -->
+      <div class="order-card">
+        <div class="order-card-icon" style="background:rgba(37,211,102,0.15);">💬</div>
+        <div class="order-card-title">WhatsApp Order</div>
+        <div class="order-card-desc">Chat with us directly for pre-bookings, parcels & custom orders.</div>
+
+        <a class="order-link order-link-wa" href="https://wa.me/919223316655" target="_blank" rel="noopener">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+
+      <!-- Zomato -->
+      <div class="order-card">
+        <div class="order-card-icon" style="background:rgba(226,55,68,0.15);">🍽️</div>
+        <div class="order-card-title">Zomato <span style="font-size:0.75rem; font-weight:400; color:rgba(255,255,255,0.5);">(In Limited pin-codes)</span></div>
+        <div class="order-card-desc">Browse our full menu, see ratings & reviews, and order with ease on Zomato.</div>
+
+        <a class="order-link order-link-zo" href="https://www.zomato.com/mumbai/royal-rasoi-kharghar-navi-mumbai" target="_blank" rel="noopener">
+          🍽️ Order on Zomato
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOURS & LOCATION ===== -->
+<section class="hours-section" id="visit">
+  <div class="hours-inner">
+    <div>
+      <div class="section-label">Visit Us</div>
+      <h2 class="section-title">Come Dine<br/>with Us</h2>
+
+      <table class="hours-table" aria-label="Opening Hours">
+        <tr>
+          <td>🌞 Lunch</td>
+          <td>12:00 PM – 3:30 PM</td>
+        </tr>
+        <tr>
+          <td>🌙 Dinner</td>
+          <td>7:00 PM – 11:30 PM</td>
+        </tr>
+        <tr>
+          <td>📅 Days Open</td>
+          <td>Monday – Sunday</td>
+        </tr>
+      </table>
+      <div class="hours-note">
+        🍃 <strong>Sadhya Tip:</strong> The daily mini-sadhya is served only during lunch hours (12 PM – 3:30 PM). Arrive early!
+      </div>
+
+      <div class="contact-block">
+        <a class="contact-item" href="tel:+919223316655">
+          <div class="contact-icon" style="background:#E8F5E9;">
+            <svg fill="none" stroke="#2C6E49" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.338c0 1.406.315 2.74.877 3.938M6.338 21.75c4.56 0 8.744-1.65 11.928-4.366M3.188 10.276A9.75 9.75 0 0013.724 20.81m-11.474-14A9.75 9.75 0 0121.75 12c0 2.03-.62 3.916-1.685 5.477"/></svg>
           </div>
-          <div class="highlight-pill">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            Banana Leaf Dining
+          <div>
+            <div class="contact-label">Call / WhatsApp</div>
+            <div class="contact-value">+91 92233 16655</div>
           </div>
-          <div class="highlight-pill">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            Fresh Kerala Fish
+        </a>
+        <a class="contact-item" href="https://maps.app.goo.gl/YourMapsLinkHere" target="_blank" rel="noopener">
+          <div class="contact-icon" style="background:#FFF3E0;">
+            <svg fill="none" stroke="#E65100" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
           </div>
-          <div class="highlight-pill">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            North & South Indian
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-value">GF, Vighnaharta CHS, Plot 10, Sector 2, Kharghar, Navi Mumbai – 410210</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://www.instagram.com/royalrasoi/" target="_blank" rel="noopener">
+          <div class="contact-icon" style="background:#FCE4EC;">
+            <svg fill="none" stroke="#C2185B" stroke-width="2" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="5" ry="5"/><path d="M16.5 7.5v.001M12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Instagram</div>
+            <div class="contact-value">@royalrasoi</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.0!2d73.0644738!3d19.0303541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3b4b4b4b4b4%3A0x0!2sRoyal+Rasoi%2C+Sector+2%2C+Kharghar%2C+Navi+Mumbai!5e0!3m2!1sen!2sin!4v1234567890"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Royal Rasoi Location on Google Maps"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews-section" id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header">
+      <div class="section-label">What Guests Say</div>
+      <h2 class="section-title">4.0 ⭐ · 2,400+ Reviews</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The Sadhya here is absolutely incredible — so many items on the banana leaf. Felt like eating at home in Kerala. Totally worth the price!"</p>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <div>
+            <div class="review-name">Arun Kumar</div>
+            <div class="review-date">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The Karimeen Pollichathu is the best I've had outside Kerala. The fish is so fresh and the banana leaf marination gives it an amazing smoky flavour."</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Sreedevi Nair</div>
+            <div class="review-date">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best Kerala food in Navi Mumbai, hands down. The mini-sadhya is a steal — so many delicious items. The staff is warm and welcoming too. Highly recommend!"</p>
+        <div class="review-author">
+          <div class="review-avatar">R</div>
+          <div>
+            <div class="review-name">Rahul Pillai</div>
+            <div class="review-date">Google Review</div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== MENU HIGHLIGHTS ===== -->
-  <section class="menu-section" id="menu">
-    <div class="menu-inner">
-      <div class="menu-header">
-        <div class="section-label">Specialities</div>
-        <h2 class="section-title">What We're Famous For</h2>
-        <p class="section-desc">From the traditional feast to coastal delicacies — every meal is a journey to Kerala.
-        </p>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo"><span>Royal</span> Rasoi</span>
+        <p>Bringing the authentic taste of Kerala to Navi Mumbai — one banana leaf at a time.</p>
       </div>
-      <div class="menu-grid">
-        <div class="menu-card">
-          <div class="menu-card-img"><img src="assets/hero.jpg" alt="Kerala Sadhya" /></div>
-          <div class="menu-card-body">
-            <div class="menu-card-cat">Daily Lunch Special</div>
-            <div class="menu-card-name">Kerala Mini Sadhya</div>
-            <div class="menu-card-desc">Traditional feast served on fresh banana leaf — rice, sambar, avial, pachadi,
-              papadam & more.</div>
-
-          </div>
-        </div>
-        <div class="menu-card">
-          <div class="menu-card-img"><img src="assets/dishes.jpg" alt="Kerala Dishes" /></div>
-          <div class="menu-card-body">
-            <div class="menu-card-cat">Coastal Delight</div>
-            <div class="menu-card-name">Karimeen Pollichathu</div>
-            <div class="menu-card-desc">Pearl spot fish marinated in spicy masala, wrapped in banana leaf and
-              slow-cooked to perfection.</div>
-
-          </div>
-        </div>
-        <div class="menu-card">
-          <div class="menu-card-img"><img src="assets/appam-stew.png" alt="Appam with Stew" /></div>
-          <div class="menu-card-body">
-            <div class="menu-card-cat">Breakfast & Dinner</div>
-            <div class="menu-card-name">Appam with Stew</div>
-            <div class="menu-card-desc">Lacy fermented rice pancakes served with a creamy coconut milk vegetable or
-              chicken stew.</div>
-
-          </div>
-        </div>
-
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+          <li><a href="#order">Order Online</a></li>
+          <li><a href="#visit">Visit Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Order Online</h4>
+        <ul>
+          <li><a href="https://wa.me/919223316655" target="_blank" rel="noopener">WhatsApp Order</a></li>
+          <li><a href="https://www.swiggy.com/city/mumbai/royal-rasoi-sector-2-kharghar-rest341308" target="_blank" rel="noopener">Swiggy</a></li>
+          <li><a href="https://www.zomato.com/mumbai/royal-rasoi-kharghar-navi-mumbai" target="_blank" rel="noopener">Zomato</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919223316655">+91 92233 16655</a></li>
+          <li><a href="https://www.instagram.com/royalrasoi/" target="_blank" rel="noopener">@royalrasoi</a></li>
+          <li><a href="https://maps.app.goo.gl/YourMapsLinkHere" target="_blank" rel="noopener">Get Directions</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- ===== ORDER SECTION ===== -->
-  <section class="order-section" id="order">
-    <div class="order-inner">
-      <div class="section-label" style="background:rgba(201,147,58,0.2); color:var(--gold-light);">Order Now</div>
-      <h2 class="section-title">Get Royal Rasoi<br />Delivered to You</h2>
-      <p class="section-desc">Order directly via WhatsApp or through your favourite food delivery app.</p>
-
-      <div class="order-cards">
-        <!-- WhatsApp -->
-        <div class="order-card">
-          <div class="order-card-icon" style="background:rgba(37,211,102,0.15);">💬</div>
-          <div class="order-card-title">WhatsApp Order</div>
-          <div class="order-card-desc">Chat with us directly for pre-bookings, parcels & custom orders.</div>
-
-          <a class="order-link order-link-wa" href="https://wa.me/919223316655" target="_blank" rel="noopener">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Chat on WhatsApp
-          </a>
-        </div>
-
-
-        <!-- Zomato -->
-        <div class="order-card">
-          <div class="order-card-icon" style="background:rgba(226,55,68,0.15);">🍽️</div>
-          <div class="order-card-title">Zomato <span
-              style="font-size:0.75rem; font-weight:400; color:rgba(255,255,255,0.5);">(In Limited pin-codes)</span>
-          </div>
-          <div class="order-card-desc">Browse our full menu, see ratings & reviews, and order with ease on Zomato.</div>
-
-          <a class="order-link order-link-zo" href="https://www.zomato.com/mumbai/royal-rasoi-kharghar-navi-mumbai"
-            target="_blank" rel="noopener">
-            🍽️ Order on Zomato
-          </a>
-        </div>
-      </div>
+    <div class="footer-bottom">
+      <span>© 2025 Royal Rasoi. All rights reserved.</span>
+      <span>Sector 2, Kharghar, Navi Mumbai – 410210</span>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- ===== HOURS & LOCATION ===== -->
-  <section class="hours-section" id="visit">
-    <div class="hours-inner">
-      <div>
-        <div class="section-label">Visit Us</div>
-        <h2 class="section-title">Come Dine<br />with Us</h2>
-
-        <table class="hours-table" aria-label="Opening Hours">
-          <tr>
-            <td>🌞 Lunch</td>
-            <td>12:00 PM – 3:30 PM</td>
-          </tr>
-          <tr>
-            <td>🌙 Dinner</td>
-            <td>7:00 PM – 11:30 PM</td>
-          </tr>
-          <tr>
-            <td>📅 Days Open</td>
-            <td>Monday – Sunday</td>
-          </tr>
-        </table>
-        <div class="hours-note">
-          🍃 <strong>Sadhya Tip:</strong> The daily mini-sadhya is served only during lunch hours (12 PM – 3:30 PM).
-          Arrive early!
-        </div>
-
-        <div class="contact-block">
-          <a class="contact-item" href="tel:+919223316655">
-            <div class="contact-icon" style="background:#E8F5E9;">
-              <svg fill="none" stroke="#2C6E49" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M2.25 6.338c0 1.406.315 2.74.877 3.938M6.338 21.75c4.56 0 8.744-1.65 11.928-4.366M3.188 10.276A9.75 9.75 0 0013.724 20.81m-11.474-14A9.75 9.75 0 0121.75 12c0 2.03-.62 3.916-1.685 5.477" />
-              </svg>
-            </div>
-            <div>
-              <div class="contact-label">Call / WhatsApp</div>
-              <div class="contact-value">+91 92233 16655</div>
-            </div>
-          </a>
-          <a class="contact-item" href="https://maps.app.goo.gl/YourMapsLinkHere" target="_blank" rel="noopener">
-            <div class="contact-icon" style="background:#FFF3E0;">
-              <svg fill="none" stroke="#E65100" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
-            </div>
-            <div>
-              <div class="contact-label">Address</div>
-              <div class="contact-value">GF, Vighnaharta CHS, Plot 10, Sector 2, Kharghar, Navi Mumbai – 410210</div>
-            </div>
-          </a>
-          <a class="contact-item" href="https://www.instagram.com/royalrasoi/" target="_blank" rel="noopener">
-            <div class="contact-icon" style="background:#FCE4EC;">
-              <svg fill="none" stroke="#C2185B" stroke-width="2" viewBox="0 0 24 24">
-                <rect width="18" height="18" x="3" y="3" rx="5" ry="5" />
-                <path d="M16.5 7.5v.001M12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" />
-              </svg>
-            </div>
-            <div>
-              <div class="contact-label">Instagram</div>
-              <div class="contact-value">@royalrasoi</div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div>
-        <div class="map-embed">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.0!2d73.0644738!3d19.0303541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3b4b4b4b4b4%3A0x0!2sRoyal+Rasoi%2C+Sector+2%2C+Kharghar%2C+Navi+Mumbai!5e0!3m2!1sen!2sin!4v1234567890"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="Royal Rasoi Location on Google Maps"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== REVIEWS ===== -->
-  <section class="reviews-section" id="reviews">
-    <div class="reviews-inner">
-      <div class="reviews-header">
-        <div class="section-label">What Guests Say</div>
-        <h2 class="section-title">4.0 ⭐ · 2,400+ Reviews</h2>
-      </div>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"The Sadhya here is absolutely incredible — so many items on the banana leaf. Felt like
-            eating at home in Kerala. Totally worth the price!"</p>
-          <div class="review-author">
-            <div class="review-avatar">A</div>
-            <div>
-              <div class="review-name">Arun Kumar</div>
-              <div class="review-date">Google Review</div>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"The Karimeen Pollichathu is the best I've had outside Kerala. The fish is so fresh and
-            the banana leaf marination gives it an amazing smoky flavour."</p>
-          <div class="review-author">
-            <div class="review-avatar">S</div>
-            <div>
-              <div class="review-name">Sreedevi Nair</div>
-              <div class="review-date">Google Review</div>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Best Kerala food in Navi Mumbai, hands down. The mini-sadhya is a steal — so many
-            delicious items. The staff is warm and welcoming too. Highly recommend!"</p>
-          <div class="review-author">
-            <div class="review-avatar">R</div>
-            <div>
-              <div class="review-name">Rahul Pillai</div>
-              <div class="review-date">Google Review</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <span class="nav-logo"><span>Royal</span> Rasoi</span>
-          <p>Bringing the authentic taste of Kerala to Navi Mumbai — one banana leaf at a time.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#menu">Our Menu</a></li>
-            <li><a href="#order">Order Online</a></li>
-            <li><a href="#visit">Visit Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Order Online</h4>
-          <ul>
-            <li><a href="https://wa.me/919223316655" target="_blank" rel="noopener">WhatsApp Order</a></li>
-            <li><a href="https://www.swiggy.com/city/mumbai/royal-rasoi-sector-2-kharghar-rest341308" target="_blank"
-                rel="noopener">Swiggy</a></li>
-            <li><a href="https://www.zomato.com/mumbai/royal-rasoi-kharghar-navi-mumbai" target="_blank"
-                rel="noopener">Zomato</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="tel:+919223316655">+91 92233 16655</a></li>
-            <li><a href="https://www.instagram.com/royalrasoi/" target="_blank" rel="noopener">@royalrasoi</a></li>
-            <li><a href="https://maps.app.goo.gl/YourMapsLinkHere" target="_blank" rel="noopener">Get Directions</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2025 Royal Rasoi. All rights reserved.</span>
-        <span>Sector 2, Kharghar, Navi Mumbai – 410210</span>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  });
 
-    // Scroll-reveal animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.menu-card, .review-card, .order-card, .stat-item').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(el);
+  // Scroll-reveal animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
     });
-    // Hamburger menu toggle
-    const hamburger = document.querySelector('.nav-hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    if (hamburger) {
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-      });
-      // Close menu when a link is tapped
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => navLinks.classList.remove('open'));
-      });
-    }
-  </script>
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.menu-card, .review-card, .order-card, .stat-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+  // Hamburger menu toggle
+  const hamburger = document.querySelector('.nav-hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    // Close menu when a link is tapped
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  }
+</script>
 
 </body>
-
 </html>
